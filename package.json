@@ -1,0 +1,22 @@
+{
+  "name": "assignment-3",
+  "version": "1.0.0",
+  "description": "Route - Assignment 3: Node Internals & Express.js CRUD with fs module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "crud",
+    "assignment3",
+    "route"
+  ],
+  "author": "Ebrahim Rajeh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
