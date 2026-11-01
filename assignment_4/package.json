@@ -1,0 +1,25 @@
+{
+  "name": "route-assignment-4",
+  "version": "1.0.0",
+  "description": "Route - Assignment 4: Node.js, Express.js, MySQL RESTful API & ERD Database Design",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "watch": "node --watch server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql2",
+    "route",
+    "assignment4"
+  ],
+  "author": "Ebrahim Rajeh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.11.0"
+  }
+}

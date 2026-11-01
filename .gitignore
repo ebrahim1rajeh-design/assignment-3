@@ -1,4 +1,6 @@
 node_modules/
+assignment_4/node_modules/
 .env
+assignment_4/.env
 *.log
 

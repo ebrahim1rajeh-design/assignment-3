@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "e8a9310b-d249-4171-a472-1144f83bca91",
+		"name": "Route - Assignment 4 (Retail Store API)",
+		"description": "Postman Collection for Route Assignment 4: Node.js, Express.js & MySQL CRUD, Reports, DDL & DCL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Data Seeding (Task 6)",
+			"item": [
+				{
+					"name": "Seed Sample Data (Task 6)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/db/seed",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["db", "seed"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Products CRUD (Task 2)",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ProductName\": \"Apple\",\n  \"Price\": 12.50,\n  \"StockQuantity\": 100,\n  \"SupplierID\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["products"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["products"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["products", "1"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Price\": 18.00,\n  \"StockQuantity\": 60\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["products", "1"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["products", "1"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 7: Update Price of Bread to 25.00",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/update-bread",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["products", "update-bread"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 8: Delete Product Eggs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/eggs",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["products", "eggs"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. Suppliers CRUD (Task 3)",
+			"item": [
+				{
+					"name": "Create Supplier",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"SupplierName\": \"FarmFoods\",\n  \"ContactNumber\": \"01112223334\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/suppliers",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["suppliers"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Suppliers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/suppliers",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["suppliers"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Supplier Information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContactNumber\": \"01234567890\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/suppliers/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["suppliers", "1"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/suppliers/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["suppliers", "1"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4. Manage Sales (Task 4)",
+			"item": [
+				{
+					"name": "Record a Sale",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ProductID\": 1,\n  \"QuantitySold\": 5,\n  \"SaleDate\": \"2025-05-21\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/sales",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["sales"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Sales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/sales",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["sales"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Sales for Specific Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/sales/product/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["sales", "product", "1"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5. Database Schema Modifications (Task 5)",
+			"item": [
+				{
+					"name": "Add Category Column to Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/db/add-category",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["db", "add-category"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Category Column from Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/db/remove-category",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["db", "remove-category"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change ContactNumber to VARCHAR(15)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/db/modify-contact",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["db", "modify-contact"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add NOT NULL to ProductName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/db/add-not-null-product-name",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["db", "add-not-null-product-name"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "6. Reports & Analytics (Tasks 9-13)",
+			"item": [
+				{
+					"name": "Task 9: Total Quantity Sold per Product (Aggregate)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/reports/total-sold",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["reports", "total-sold"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 10: Product with Highest Stock Quantity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/reports/highest-stock",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["reports", "highest-stock"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 11: Suppliers Starting with 'F'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/reports/suppliers-f",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["reports", "suppliers-f"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 12: Products That Have Never Been Sold",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/reports/unsold-products",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["reports", "unsold-products"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 13: Sales Details (with Product Name JOIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/reports/sales-details",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["reports", "sales-details"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "7. Admin & Permissions (Tasks 14-16)",
+			"item": [
+				{
+					"name": "Task 14: Create store_manager & Grant SELECT, INSERT, UPDATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admin/create-store-manager",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["admin", "create-store-manager"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 15: Revoke UPDATE from store_manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admin/revoke-update",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["admin", "revoke-update"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 16: Grant DELETE on Sales to store_manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admin/grant-delete-sales",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["admin", "grant-delete-sales"]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
