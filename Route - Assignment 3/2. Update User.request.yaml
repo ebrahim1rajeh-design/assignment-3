@@ -1,0 +1,13 @@
+$kind: http-request
+description: Updates an existing user's name, age, or email by ID retrieved from params.
+url: "{{baseUrl}}/user/1"
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "age": 30
+    }
+order: 2000

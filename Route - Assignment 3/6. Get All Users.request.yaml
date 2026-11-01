@@ -1,0 +1,5 @@
+$kind: http-request
+description: Gets all users stored in users.json.
+url: "{{baseUrl}}/user"
+method: GET
+order: 6000

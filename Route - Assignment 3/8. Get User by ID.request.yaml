@@ -1,0 +1,5 @@
+$kind: http-request
+description: Gets a user by their ID.
+url: "{{baseUrl}}/user/1"
+method: GET
+order: 8000
