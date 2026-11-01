@@ -1,7 +1,0 @@
-$kind: http-request
-description: Filters users with age greater than or equal to minAge query parameter.
-url: "{{baseUrl}}/user/filter?minAge=25"
-method: GET
-queryParams:
-  minAge: "25"
-order: 7000

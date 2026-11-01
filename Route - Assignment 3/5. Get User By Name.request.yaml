@@ -1,7 +1,0 @@
-$kind: http-request
-description: Gets user by name passed as query parameter.
-url: "{{baseUrl}}/user/getByName?name=ali"
-method: GET
-queryParams:
-  name: ali
-order: 5000

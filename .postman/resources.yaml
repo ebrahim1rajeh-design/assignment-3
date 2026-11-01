@@ -1,6 +1,0 @@
-localResources:
-  collections:
-    - ../Assignment3.postman_collection.json
-workspace:
-  id: bce8b5fd-e186-4bb2-8e3b-255972b2eb82
-  name: My Workspace

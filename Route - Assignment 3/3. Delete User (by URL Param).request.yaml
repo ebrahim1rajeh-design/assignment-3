@@ -1,5 +1,0 @@
-$kind: http-request
-description: Deletes a user by ID passed in URL params.
-url: "{{baseUrl}}/user/1"
-method: DELETE
-order: 3000

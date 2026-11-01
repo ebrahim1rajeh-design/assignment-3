@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "1. Add User",
+			"name": "1. Add User (POST /user)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -18,23 +18,25 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"User 1\",\n  \"age\": 27,\n  \"email\": \"newuser@email.com\"\n}"
+					"raw": "{\n  \"name\": \"User 1\",\n  \"age\": 27,\n  \"email\": \"user@email.com\"\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/user",
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user"
 					]
 				},
-				"description": "Adds a new user to users.json. Returns error if email already exists."
+				"description": "Adds a new user to users.json. Checks if email already exists."
 			},
 			"response": []
 		},
 		{
-			"name": "2. Update User",
+			"name": "2. Update User (PATCH /user/:id)",
 			"request": {
 				"method": "PATCH",
 				"header": [
@@ -48,40 +50,44 @@
 					"raw": "{\n  \"age\": 30\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/user/1",
+					"raw": "http://localhost:3000/user/1",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user",
 						"1"
 					]
 				},
-				"description": "Updates an existing user's name, age, or email by ID retrieved from params."
+				"description": "Updates an existing user's name, age, or email by ID from params."
 			},
 			"response": []
 		},
 		{
-			"name": "3. Delete User (by URL Param)",
+			"name": "3a. Delete User by Params (DELETE /user/:id)",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/user/1",
+					"raw": "http://localhost:3000/user/1",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user",
 						"1"
 					]
 				},
-				"description": "Deletes a user by ID passed in URL params."
+				"description": "Deletes user by ID passed in URL params."
 			},
 			"response": []
 		},
 		{
-			"name": "4. Delete User (by Request Body)",
+			"name": "3b. Delete User by Body (DELETE /user)",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -95,28 +101,32 @@
 					"raw": "{\n  \"id\": 2\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/user",
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user"
 					]
 				},
-				"description": "Deletes a user by ID passed in request body."
+				"description": "Deletes user by ID passed in request body."
 			},
 			"response": []
 		},
 		{
-			"name": "5. Get User By Name",
+			"name": "4. Get User By Name (GET /user/getByName)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/user/getByName?name=ali",
+					"raw": "http://localhost:3000/user/getByName?name=ali",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user",
 						"getByName"
@@ -128,20 +138,22 @@
 						}
 					]
 				},
-				"description": "Gets user by name passed as query parameter."
+				"description": "Gets user by name query parameter."
 			},
 			"response": []
 		},
 		{
-			"name": "6. Get All Users",
+			"name": "5. Get All Users (GET /user)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/user",
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user"
 					]
@@ -151,15 +163,17 @@
 			"response": []
 		},
 		{
-			"name": "7. Filter Users by Minimum Age",
+			"name": "6. Filter Users by Minimum Age (GET /user/filter)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/user/filter?minAge=25",
+					"raw": "http://localhost:3000/user/filter?minAge=25",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user",
 						"filter"
@@ -171,20 +185,22 @@
 						}
 					]
 				},
-				"description": "Filters users with age greater than or equal to minAge query parameter."
+				"description": "Filters users by minAge query parameter."
 			},
 			"response": []
 		},
 		{
-			"name": "8. Get User by ID",
+			"name": "7. Get User by ID (GET /user/:id)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/user/1",
+					"raw": "http://localhost:3000/user/1",
+					"protocol": "http",
 					"host": [
-						"{{baseUrl}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"user",
 						"1"
@@ -194,13 +210,5 @@
 			},
 			"response": []
 		}
-	],
-	"variable": [
-		{
-			"key": "baseUrl",
-			"value": "http://localhost:3000",
-			"type": "string"
-		}
 	]
 }
-
