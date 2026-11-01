@@ -35,3 +35,4 @@ console.log('Test 2: ["dog", "racecar", "car"] ->', JSON.stringify(longestCommon
 console.log('Test 3: ["interspecies", "interstellar", "interstate"] ->', JSON.stringify(longestCommonPrefix(["interspecies", "interstellar", "interstate"]))); // Output: "inters"
 
 module.exports = longestCommonPrefix;
+
