@@ -242,32 +242,14 @@ node bonus.js
 
 ---
 
-## 🐙 How to Push to GitHub
+## 🐙 GitHub Repository
 
-Follow these steps to push this project to your GitHub repository:
+- **Repository Link:** [https://github.com/ebrahim1rajeh-design/assignment-3](https://github.com/ebrahim1rajeh-design/assignment-3)
 
-1. **Check Git Status in VS Code Terminal:**
-   ```bash
-   git status
-   ```
+To push any future updates, simply run:
+```bash
+git add .
+git commit -m "Update assignment"
+git push
+```
 
-2. **Stage and Commit all files:**
-   ```bash
-   git add .
-   git commit -m "Complete Route Assignment 3: Node Internals, Express CRUD, Postman Collection & LeetCode Bonus"
-   ```
-
-3. **Create a new Repository on GitHub:**
-   - Go to [https://github.com/new](https://github.com/new)
-   - Repository name: e.g. `route-assignment-3` or `Node-Assignment3`
-   - Set to **Public**
-   - Do **NOT** check "Initialize with README" (we already have one).
-   - Click **Create repository**.
-
-4. **Link and Push:**
-   Replace `<YOUR_GITHUB_USERNAME>` and `<REPO_NAME>` with your GitHub details:
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<REPO_NAME>.git
-   git push -u origin main
-   ```
